@@ -19,9 +19,9 @@ app.use(helmet());
 
 
 // ========== Routes ==========
-app.get('/', (request, response) => {
-    response.status(200).json({ message: "App Successfully Working" });
-})
+app.use(process.env.API_PREFIX, [
+    require('./routes/auth.routes')
+])
 
 
 // ========== Error Handling ==========
