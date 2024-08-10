@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('./config/config');
 
 // ========== Import Dependencies ==========
 const express = require('express');
