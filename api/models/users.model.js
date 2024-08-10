@@ -3,7 +3,6 @@ const { genSalt, hash, compare } = require('bcrypt');
 const { createHash, randomBytes } = require('crypto');
 const { isAlpha, isEmail, isStrongPassword } = require('validator');
 
-
 const UserSchema = new Schema(
     {
         firstName: {
@@ -84,6 +83,5 @@ UserSchema.methods.generateResetPasswordToken = async function () {
     this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
     return resetToken;
 }
-
 
 module.exports = model('users', UserSchema);
