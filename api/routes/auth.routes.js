@@ -3,9 +3,9 @@ const { signup, verifyEmail, verifyPassword, forgotPassword, resetPassword } = r
 const router = Router();
 
 router.post('/auth/signup', signup);
-router.post('/auth/verify-email', verifyEmail);
-router.post('/auth/verify-password', verifyPassword);
-router.post('/auth/forgot-password', forgotPassword);
-router.post('/auth/reset-password/:token', resetPassword);
+router.post('/auth/verifyEmail', verifyEmail);
+router.post('/auth/verifyPassword', verifyPassword);
+router.post('/auth/forgotPassword', forgotPassword);
+router.post('/auth/resetPassword/:token', resetPassword);
 
 module.exports = router;
